@@ -1,3 +1,4 @@
+import { StringifyOptions } from "querystring";
 import "styled-components";
 
 declare module "styled-components" {
@@ -244,9 +245,100 @@ declare module "styled-components" {
                     },
                 },
             },
-        };
-        // typography: {},
-        // spacing: {},
-        // borderRadius: {},
+        },
+        typography: {
+            fontFamily: {
+                heading: string,
+                text: string,
+            },
+            fontSize: {
+                heading: {
+                    h1: string,
+                    h2: string,
+                    h3: string,
+                    h4: string,
+                    h5: string,
+                },
+                text: {
+                    large: string,
+                    base: string,
+                    small: string,
+                },
+                component: {
+                    base: string,
+                    small: string,
+                    xSmall: string,
+                },
+            },
+            lineHeight: {
+                heading: {
+                    h1: string,
+                    h2: string,
+                    h3: string,
+                    h4: string,
+                    h5: string,
+                },
+                text: {
+                    large: string,
+                    base: string,
+                    small: string,
+                },
+                component: {
+                    base: string,
+                    small: string,
+                    xSmall: string,
+                },
+            },
+            fontWeight: {
+                regular: string,
+                semiBold: string,
+            },
+        },
+        spacing: {
+            inner: {
+                noGap: string,
+                xSmall: string,
+                small: string,
+                medium: string,
+                large: string,
+                xLarge: string,
+            },
+            padding: {
+                noPadding: string,
+                xSmall: string,
+                small: string,
+                medium: string,
+                large: string,
+                xLarge: string,
+                xxLarge: string,
+            },
+            grid: {
+                columnGap: string,
+                rowGap: string,
+                columnCount: string,
+            },
+            size: {
+                xSmall: string,
+                small: string,
+                base: string,
+                large: string,
+                xLarge: string,
+                xxLarge: string,
+                xxxLarge: string,
+                xxxxLarge: string,
+                xxxxxLarge: string,
+                xxxxxxLarge: string,
+                xxxxxxxLarge: string,
+                xxxxxxxxLarge: string,
+            },
+        },
+        borderRadius: {
+            micro: string,
+            componentInner: string,
+            componentBase: string,
+            sectionInner: string,
+            sectionBase: string,
+            rounded: string,
+        },
     }
 }

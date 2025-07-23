@@ -1,5 +1,5 @@
 import { DefaultTheme } from "styled-components";
-import { colors } from "./tokens/index";
+import { colors, spacers, typography } from "./tokens/index";
 
 export const lightTheme: DefaultTheme = {
     colors: {
@@ -244,7 +244,102 @@ export const lightTheme: DefaultTheme = {
                 },
             },
         },
-    }
+    },
+    typography: {
+        fontFamily: {
+            heading: 'Inter',
+            text: 'Inter',
+        },
+        fontSize: {
+            heading: {
+                h1: typography.fontSize.h1,
+                h2: typography.fontSize.h2,
+                h3: typography.fontSize.h3,
+                h4: typography.fontSize.h4,
+                h5: typography.fontSize.h5,
+            },
+            text: {
+                large: typography.fontSize.textLarge,
+                base: typography.fontSize.textBase,
+                small: typography.fontSize.textSmall,
+            },
+            component: {
+                base: typography.fontSize.componentBase,
+                small: typography.fontSize.componentSmall,
+                xSmall: typography.fontSize.componentXSmall,
+            },
+        },
+        lineHeight: {
+            heading: {
+                h1: typography.lineHeight.h1,
+                h2: typography.lineHeight.h2,
+                h3: typography.lineHeight.h3,
+                h4: typography.lineHeight.h4,
+                h5: typography.lineHeight.h5,
+            },
+            text: {
+                large: typography.lineHeight.textLarge,
+                base: typography.lineHeight.textBase,
+                small: typography.lineHeight.textSmall,
+            },
+            component: {
+                base: typography.lineHeight.componentBase,
+                small: typography.lineHeight.componentSmall,
+                xSmall: typography.lineHeight.componentXSmall,
+            },
+        },
+        fontWeight: {
+            regular: typography.fontWeight.regular,
+            semiBold: typography.fontWeight.semiBold,
+        }
+
+    },
+    spacing: {
+        inner: {
+            noGap: spacers.none,
+            xSmall: spacers[2],
+            small: spacers[4],
+            medium: spacers[8],
+            large: spacers[12],
+            xLarge: spacers[16],
+        },
+        padding: {
+            noPadding: spacers.none,
+            xSmall: spacers[8],
+            small: spacers[12],
+            medium: spacers[16],
+            large: spacers[24],
+            xLarge: spacers[32],
+            xxLarge: spacers[48],
+        },
+        grid: {
+            columnGap: spacers[16],
+            rowGap: spacers[16],
+            columnCount: spacers[12],
+        },
+        size: {
+            xSmall: spacers[8],
+            small: spacers[12],
+            base: spacers[16],
+            large: spacers[20],
+            xLarge: spacers[24],
+            xxLarge: spacers[32],
+            xxxLarge: spacers[40],
+            xxxxLarge: spacers[44],
+            xxxxxLarge: spacers[48],
+            xxxxxxLarge: spacers[104],
+            xxxxxxxLarge: spacers[128],
+            xxxxxxxxLarge: spacers[256],
+        },
+    },
+    borderRadius: {
+        micro: spacers[4],
+        componentInner: spacers[8],
+        componentBase: spacers[12],
+        sectionInner: spacers[20],
+        sectionBase: spacers[24],
+        rounded: spacers[999],
+    },
 }
 
 export const darkTheme: DefaultTheme = {
