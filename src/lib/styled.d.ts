@@ -340,5 +340,12 @@ declare module "styled-components" {
             sectionBase: string,
             rounded: string,
         },
+        focus: {
+            base: string,
+            commerce: string,
+        }
+        animation: {
+            base: string,
+        }
     }
 }

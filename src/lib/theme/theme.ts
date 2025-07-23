@@ -340,6 +340,13 @@ export const lightTheme: DefaultTheme = {
         sectionBase: spacers[24],
         rounded: spacers[999],
     },
+    focus: {
+        base: colors.focusBase,
+        commerce: colors.focusCommerce,
+    },
+    animation: {
+        base: `all 0.4s`,
+    },
 }
 
 export const darkTheme: DefaultTheme = {
