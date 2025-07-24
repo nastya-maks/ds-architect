@@ -247,8 +247,8 @@ export const lightTheme: DefaultTheme = {
     },
     typography: {
         fontFamily: {
-            heading: 'Inter',
-            text: 'Inter',
+            heading: `'Inter', sans-serif`,
+            text: `'Inter', sans-serif`,
         },
         fontSize: {
             heading: {
@@ -341,8 +341,8 @@ export const lightTheme: DefaultTheme = {
         rounded: spacers[999],
     },
     focus: {
-        base: colors.focusBase,
-        commerce: colors.focusCommerce,
+        base: "0 0 0 3px rgba(74, 95, 201, 0.30)",
+        commerce: "0 0 0 3px rgba(119, 202, 39, 0.40)",
     },
     animation: {
         base: `all 0.4s`,

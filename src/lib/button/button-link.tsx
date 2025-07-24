@@ -26,7 +26,7 @@ const StyledButtonLink = styled.button<IButtonLinkProps> `
     ${(props) => props.appearance === 'primary' &&
         `
         &:enabled {
-            background-color: ${props.theme.colors.bg.base.fakeAlpha};
+            background-color: transparent;
             color: ${props.theme.colors.text.brand.normal.enabled};
         }
         &:hover {
@@ -42,8 +42,8 @@ const StyledButtonLink = styled.button<IButtonLinkProps> `
 
     ${(props) => props.disabled &&
         `
-        &:disabled: {
-            background-color: ${props.theme.colors.bg.base.disabled};
+        &:disabled {
+            background-color: transparent;
             color: ${props.theme.colors.text.base.disabled};
             cursor: not-allowed;
         }

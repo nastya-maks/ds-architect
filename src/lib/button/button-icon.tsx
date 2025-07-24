@@ -1,27 +1,22 @@
 import styled from "styled-components";
 import { Icon, iconsType } from '../icon';
 
-interface IButtonProps {
+interface IButtonIconProps {
     appearance: 'commerce' | 'primary' | 'secondary',
     size?: 'base',
     disabled?: boolean,
     loading?: boolean,
-    iconBefore?: iconsType,
-    iconAfter?: iconsType,
-    text: string,
+    icon: iconsType,
 }
 
-const StyledButton = styled.button<IButtonProps> `
-    min-width: ${(props) => props.theme.spacing.size.xxxxxxLarge};
+const StyledButtonIcon = styled.button<IButtonIconProps> `
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: ${(props) => props.theme.spacing.inner.small};
     border: none;
     outline: none;
-    border-radius: ${(props) => props.theme.borderRadius.componentBase};
-    font-family: ${(props) => props.theme.typography.fontFamily.text};
+    border-radius: ${(props) => props.theme.borderRadius.rounded};
     cursor: pointer;
     transition: ${(props) => props.theme.animation.base};
 
@@ -87,36 +82,27 @@ const StyledButton = styled.button<IButtonProps> `
 
     ${(props) => props.size === 'base' &&
         `
-        height: ${props.theme.spacing.size.xxxxLarge};
-        padding: ${props.theme.spacing.padding.small} ${props.theme.spacing.padding.medium};
-        font-size: ${props.theme.typography.fontSize.component.base};
-        font-weight: ${props.theme.typography.fontWeight.semiBold};
-        line-height: ${props.theme.typography.lineHeight.component.base};
+        width: ${props.theme.spacing.size.xxLarge};
+        height: ${props.theme.spacing.size.xxLarge};
     `}
 `;
 
-export const Button: React.FC<IButtonProps> = ({
+export const ButtonIcon: React.FC<IButtonIconProps> = ({
     appearance = 'primary',
     size = 'base',
     disabled,
     loading,
-    iconBefore,
-    iconAfter,
-    text = 'Button',
+    icon,
 }) => {
     return (
-        <StyledButton
+        <StyledButtonIcon
             appearance={appearance}
             size={size}
             disabled={disabled}
             loading={loading}
-            iconBefore={iconBefore}
-            iconAfter={iconAfter}
-            text={text}
+            icon={icon}
         >
-            {iconBefore && <Icon size={20} iconName={iconBefore}/>}
-            {text}
-            {iconAfter && <Icon size={20} iconName={iconAfter}/>}
-        </StyledButton>
+            {icon && <Icon size={16} iconName={icon}/>}
+        </StyledButtonIcon>
     );
 };

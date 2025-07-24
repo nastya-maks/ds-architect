@@ -129,6 +129,6 @@ export const colors = {
 		90: "hsla(240, 7%, 5%, 0.9)",
 	},
 
-	focusCommerce: "hsla(91, 68%, 47%, 0.2))",
-	focusBase: "hsla(230, 54%, 54%, 0.2))",
+	// focusCommerce: "hsla(91, 68%, 47%, 0.2))",
+	// focusBase: "hsla(230, 54%, 54%, 0.2))",
 };
